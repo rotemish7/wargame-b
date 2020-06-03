@@ -1,7 +1,7 @@
 #!make -f
 
 CXX=clang++-9 
-CXXFLAGS=-std=c++2a
+CXXFLAGS=-std=c++2a -Wno-potentially-evaluated-expression
 
 HEADERS := Board.hpp Soldier.hpp $(wildcard *.h*)
 STUDENT_SOURCES := $(filter-out $(wildcard Test*.cpp), $(filter-out $(wildcard Demo.cpp), $(wildcard *.cpp)))
