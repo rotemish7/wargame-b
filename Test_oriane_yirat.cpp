@@ -11,6 +11,8 @@
 #include "Paramedic.hpp"
 #include "ParamedicCommander.hpp"
 
+using namespace WarGame;
+
 WarGame::Board fillBoard(){
     WarGame::Board p(6,6);
     p[{0,0}]= new FootSoldier(1);
