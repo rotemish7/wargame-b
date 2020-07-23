@@ -1,10 +1,10 @@
 #!make -f
 
 CXX=clang++-9 
-CXXFLAGS=-std=c++2a -Wno-potentially-evaluated-expression
+CXXFLAGS=-std=c++2a
 
-HEADERS := Board.hpp Soldier.hpp $(wildcard *.h*)
-STUDENT_SOURCES := $(filter-out $(wildcard Test*.cpp), $(filter-out $(wildcard Demo.cpp), $(wildcard *.cpp)))
+HEADERS := solver.hpp $(wildcard *.h*)
+STUDENT_SOURCES := $(filter-out $(wildcard Test*.cpp), $(wildcard *.cpp))
 STUDENT_OBJECTS := $(subst .cpp,.o,$(STUDENT_SOURCES))
 
 run: test
